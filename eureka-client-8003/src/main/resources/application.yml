@@ -1,0 +1,20 @@
+server:
+  port: 8003
+
+eureka:
+  client: #\u5BA2\u6237\u7AEF\u6CE8\u518C\u8FDBeureka\u670D\u52A1\u5217\u8868\u5185
+    service-url:
+      #defaultZone: http://localhost:7001/eureka
+       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+  instance:
+    instance-id: microservicecloud-dept8003
+    prefer-ip-address: true     #\u8BBF\u95EE\u8DEF\u5F84\u53EF\u4EE5\u663E\u793AIP\u5730\u5740
+
+spring:
+   application:
+    name: microservicecloud-dept
+   datasource:
+    driver-class-name: com.mysql.jdbc.Driver             # mysql\u9A71\u52A8\u5305
+    url: jdbc:mysql://localhost:3306/org8003             # \u6570\u636E\u5E93\u540D\u79F0
+    username: root
+    password: root
